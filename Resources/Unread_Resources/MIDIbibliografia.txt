@@ -1,0 +1,14 @@
+Przeniesienie genvar na zewn¹trz always, zrozumienie zasady dzia³ania:
+https://stackoverflow.com/questions/12504837/verilog-generate-genvar-in-an-always-block
+
+Operatory:
+https://class.ece.uw.edu/cadta/verilog/operators.html
+
+Kolejnosæ wykonywania:
+http://www.vlsiinterviewquestions.org/2012/07/18/verilog-execution-order/
+
+Shift reg:
+https://techmasterplus.com/programs/verilog/verilog-shiftregister.php
+
+FIFO:
+https://stackoverflow.com/questions/24027523/first-in-first-out-fifo-using-verilog
