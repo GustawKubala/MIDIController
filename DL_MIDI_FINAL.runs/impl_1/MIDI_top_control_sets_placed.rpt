@@ -1,0 +1,80 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Feb  2 03:21:26 2023
+| Host         : nerfoxcomputer running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MIDI_top_control_sets_placed.rpt
+| Design       : MIDI_top
+| Device       : xc7z010
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            2 |
+|      4 |            1 |
+|      5 |            2 |
+|      7 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              32 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              24 |            4 |
+| Yes          | No                    | No                     |              31 |           10 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               5 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-------------------------------------------+-----------------------+------------------+----------------+
+|     Clock Signal     |               Enable Signal               |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------------+-------------------------------------------+-----------------------+------------------+----------------+
+|  clk_IBUF_BUFG       | PISO/dout_i_1_n_0                         |                       |                1 |              1 |
+|  ADC/XLXI_7/drdy_out |                                           |                       |                1 |              2 |
+| ~ADC/XLXI_7/drdy_out |                                           |                       |                1 |              2 |
+|  clk_IBUF_BUFG       | FIFO/read_pointer[2]_i_1_n_0              |                       |                1 |              4 |
+|  clk_IBUF_BUFG       | PISO/j[4]_i_2_n_0                         | PISO/j[4]_i_1_n_0     |                1 |              5 |
+|  clk_IBUF_BUFG       | PISO/E[0]                                 |                       |                2 |              5 |
+|  ADC/XLXI_7/drdy_out | ADC/velocity_out[6]_i_1_n_0               |                       |                2 |              7 |
+|  clk_IBUF_BUFG       | event_handler/vel_buf_reg_0_3_0_0_i_1_n_0 |                       |                5 |             17 |
+|  clk_IBUF_BUFG       |                                           | FIFO/dout[23]_i_1_n_0 |                4 |             24 |
+|  clk_IBUF_BUFG       |                                           |                       |                9 |             28 |
+|  clk_IBUF_BUFG       | FIFO/p_0_in                               |                       |                5 |             36 |
++----------------------+-------------------------------------------+-----------------------+------------------+----------------+
+
+
